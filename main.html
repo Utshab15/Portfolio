@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+  <!-- =============================================
+       META & TITLE
+       ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utshab Adhikari - Portfolio</title>
+
+  <!-- =============================================
+       FONTS
+       ============================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- =============================================
+       ICONS (Font Awesome)
+       ============================================= -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- =============================================
+       STYLESHEET
+       ============================================= -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+  <!-- =============================================
+       BACKGROUND — Particle Canvas + Glow Orbs
+       ============================================= -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+
+  <!-- =============================================
+       NAVBAR
+       ============================================= -->
+  <nav id="navbar">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo">UA<span>.</span></a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Theme Toggle + Hamburger -->
+      <div class="nav-right">
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon sun"><i class="fa-solid fa-sun"></i></span>
+          <span class="theme-icon moon"><i class="fa-solid fa-moon"></i></span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- =============================================
+       MAIN CONTENT
+       ============================================= -->
+  <main>
+
+    <!-- -------------------------------------------
+         SECTION 1 — HERO
+         ------------------------------------------- -->
+    <section id="hero">
+
+      <!-- Left: Text Content -->
+      <div class="hero-content">
+
+        <!-- "Available" badge -->
+        <div class="hero-badge reveal">
+          <span class="badge-dot"></span>
+          Open to opportunities &amp; collaborations
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="hero-title reveal">
+          <span class="line">Hi, I'm <em>Utshab Adhikari</em></span>
+          <span class="line">Python Dev &amp;</span>
+          <span class="line gradient-text">Web Developer</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero-sub reveal">
+          An 18-year-old developer from Nepal — passionate about Python, web development,<br class="desktop-br" />
+          IoT with Arduino, and building things that actually work.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta reveal">
+          <a href="#projects" class="btn btn-primary">
+            <span>View My Work</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="hero-stats reveal">
+          <div class="stat"><strong>3+</strong><span>Years Learning</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>10+</strong><span>Projects</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>18</strong><span>Years Old</span></div>
+        </div>
+
+      </div>
+
+      <!-- Right: Code Card Visual -->
+      <div class="hero-visual reveal">
+        <div class="hero-card glass-card tilt-card">
+
+          <!-- Fake browser chrome header -->
+          <div class="card-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="card-title-bar">portfolio.tsx</span>
+          </div>
+
+          <!-- Syntax-highlighted code snippet -->
+          <pre class="code-block"><code><span class="c-purple">const</span> <span class="c-blue">Utshab</span> = {
+  <span class="c-teal">age</span>:    <span class="c-yellow">18</span>,
+  <span class="c-teal">stack</span>: [
+    <span class="c-yellow">"Python"</span>, <span class="c-yellow">"HTML/CSS"</span>,
+    <span class="c-yellow">"JS"</span>, <span class="c-yellow">"PHP"</span>, <span class="c-yellow">"Arduino"</span>
+  ],
+  <span class="c-teal">goal</span>:   <span class="c-yellow">"Learn everything"</span>,
+  <span class="c-teal">grind</span>:  <span class="c-purple">Infinity</span> <span class="c-comment">// 🚀</span>
+};</code></pre>
+
+          <!-- Status footer -->
+          <div class="card-footer">
+            <span class="status-dot"></span> online &amp; available
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- -------------------------------------------
+         SECTION 2 — ABOUT
+         ------------------------------------------- -->
+    <section id="about">
+
+      <div class="section-header reveal">
+        <span class="section-tag">01 — About</span>
+        <h2>The person <em>behind the keyboard</em></h2>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Avatar Card -->
+        <div class="about-img-wrap reveal">
+          <div class="about-img-card glass-card tilt-card">
+            <div class="about-photo-wrap">
+              <img src="Utshab.jpg" alt="Utshab Adhikari" class="about-photo" />
+              <div class="avatar-badge"><i class="fa-solid fa-code"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text Content -->
+        <div class="about-text reveal">
+          <p class="about-lead">
+            I'm Utshab Adhikari — an 18-year-old developer from Nepal with a genuine passion for learning, building, and breaking things (then fixing them).
+          </p>
+          <p>
+            I started my coding journey after completing my Grade 10 (SEE) exams in April 2024. During that vacation I dove headfirst into Python and Discord bot development. I then joined Plus 2 Science with Computer as a major, where I picked up Photoshop and frontend web development in Grade 11.
+          </p>
+          <p>
+            In Grade 12 I levelled up significantly — I explored IoT with Arduino and built a fully functional weather-forecasting device using Arduino Cloud, and I also learned PHP for backend development. I recently completed my Grade 12 NEB board exams in May 2026 and I'm ready for whatever comes next.
+          </p>
+          <p>
+            Outside of code, I've moderated Discord servers, owned and developed Minecraft servers, and I'm always chasing something new to learn.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Python Enthusiast</span>
+            <span class="tag">Web Developer</span>
+            <span class="tag">IoT &amp; Arduino</span>
+            <span class="tag">Discord Bot Dev</span>
+            <span class="tag">Minecraft Server Dev</span>
+            <span class="tag">Lifelong Learner</span>
+          </div>
+          <a href="#contact" class="btn btn-primary sm">
+            Let's connect <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- -------------------------------------------
+         SECTION 3 — SKILLS
+         (Cards are injected by script.js)
+         ------------------------------------------- -->
+    <section id="skills">
+      <div class="section-header reveal">
+        <span class="section-tag">02 — Skills</span>
+        <h2>My <em>tech stack</em></h2>
+      </div>
+      <div class="skills-grid" id="skills-grid"></div>
+    </section>
+
+
+    <!-- -------------------------------------------
+         SECTION 4 — PROJECTS
+         (Cards + filter bar injected by script.js)
+         ------------------------------------------- -->
+    <section id="projects">
+      <div class="section-header reveal">
+        <span class="section-tag">03 — Projects</span>
+        <h2>Things I've <em>built</em></h2>
+      </div>
+      <div class="filter-bar reveal" id="filter-bar"></div>
+      <div class="projects-grid" id="projects-grid"></div>
+    </section>
+
+
+    <!-- -------------------------------------------
+         SECTION 5 — EXPERIENCE / TIMELINE
+         (Items injected by script.js)
+         ------------------------------------------- -->
+    <section id="experience">
+      <div class="section-header reveal">
+        <span class="section-tag">04 — Experience</span>
+        <h2>My <em>journey</em></h2>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+
+    <!-- -------------------------------------------
+         SECTION 6 — CONTACT
+         (Cards injected by script.js)
+         ------------------------------------------- -->
+    <section id="contact">
+      <div class="section-header reveal">
+        <span class="section-tag">05 — Contact</span>
+        <h2>Let's <em>connect</em></h2>
+      </div>
+      <p class="contact-sub reveal">
+        Have a project in mind, or just want to say hi? My inbox is always open.
+      </p>
+      <div class="contact-grid" id="contact-grid"></div>
+    </section>
+
+  </main>
+
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer>
+    <div class="footer-inner">
+      <a href="#hero" class="nav-logo">UA<span>.</span></a>
+      <p>Designed &amp; built by Utshab Adhikari &middot; 2026</p>
+      <div class="footer-socials">
+        <a href="https://github.com"    target="_blank" aria-label="GitHub">   <i class="fa-brands fa-github"></i>   </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://discord.com"   target="_blank" aria-label="Discord">  <i class="fa-brands fa-discord"></i>  </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =============================================
+       SCRIPTS  (data first, then main logic)
+       ============================================= -->
+  <script src="script.js"></script>
+
+</body>
+</html>
